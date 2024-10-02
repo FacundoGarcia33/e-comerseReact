@@ -1,0 +1,13 @@
+.carro {
+    height: 120px;
+    margin-top: 10px;
+    width: 200px;
+}
+.carrito {
+    display: flex;
+}
+.carrito p {
+    font-size: 50px;
+    margin-right: 15px;
+    margin-top: 25px;
+}

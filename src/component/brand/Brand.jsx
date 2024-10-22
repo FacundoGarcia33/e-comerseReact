@@ -1,4 +1,5 @@
 import "./brand.css";
+import { Link } from "react-router-dom";
 
 //import logo from "../../assets/logo E-comerse.png";
 const Brand = () => {

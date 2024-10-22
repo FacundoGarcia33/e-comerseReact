@@ -5,6 +5,7 @@
 }
 .carrito {
   display: flex;
+  margin: 10px;
 }
 .carrito p {
   font-size: 40px;

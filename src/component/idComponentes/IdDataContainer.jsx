@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { MisProductos } from "../../data/data.js";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import  "./IdDataContainer.css"
 
-import "./itemListcintainer.css";
-const ItemDataContainer = () => {
+
+const IdDataContainer = () => {
   const [productos, setProductos] = useState([]);
-  const {Idcategory} = useParams()
+  const {Idproducto} = useParams()
 
   useEffect(() => {
     MisProductos()
       .then((data) => {
-        if(Idcategory) {
-          const filtrarProducto = data.filter((productos) => productos.category === Idcategory)
-          setProductos(filtrarProducto)
+        if(Idproducto) {
+          const filtrarid = data.filter((productos) => productos.id === Idproducto)
+          setProductos(filtrarid)
         }else {
           setProductos(data)
         }
@@ -21,7 +21,7 @@ const ItemDataContainer = () => {
       .catch((error) => {
         console.error(error);
       })
-    },[Idcategory]);
+    },[Idproducto]);
 
   return (
     <div className="Products">
@@ -30,9 +30,9 @@ const ItemDataContainer = () => {
           <div key={producto.id} className="card">
             <img src={producto.image} alt="" />
             <h2>{producto.name}</h2>
-            <p>Precio: ${producto.price}</p>
+            <p className="descripccion">Precio: ${producto.price}</p>
             <p>category: {producto.category}</p>
-            <Link to={"/detail/" + producto.id}><button>Ver mas</button></Link>
+            <p className="descripccion">{producto.descripcion}</p>
           </div>
         ))
       }
@@ -40,4 +40,4 @@ const ItemDataContainer = () => {
   );
 };
 
-export default ItemDataContainer;
+export default IdDataContainer;

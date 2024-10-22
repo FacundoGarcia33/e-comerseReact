@@ -1,0 +1,11 @@
+.descripccion {
+  color: black;
+  font-size: 15px;
+  margin: 3px;
+}
+.card {
+  text-align: center;
+}
+.card h2 {
+  font-size: 25px;
+}

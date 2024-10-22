@@ -8,9 +8,9 @@ const Navbar = () => {
     <div className="nav">
       <Brand />
       <ul className="listado">
-        <Link to="/">Gorras</Link>
-        <Link to="/">Camperas</Link>
-        <Link to="/">Remeras</Link>
+        <li><Link to="/category/gorras" className="category">Gorras</Link></li>
+        <li><Link to="/category/camperas" className="category">Camperas</Link></li>
+        <li><Link to="/category/remeras" className="category">Remeras</Link></li>
       </ul>
       <Carrito />
     </div>

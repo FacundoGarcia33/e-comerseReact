@@ -1,11 +1,15 @@
-import './CardWiset.css'
+import "./CardWiset.css";
+import { FaCartShopping } from "react-icons/fa6";
+
 const CardWiset = () => {
   return (
-    <div className='carrito'>
-        <img className='carro' src="https://img.icons8.com/m_rounded/200w/shopping-cart.png" alt="" /> 
+    <>
+      <div className="carrito">
+        <FaCartShopping size={50} style={{ marginTop: "30px" }} />
         <p>1</p>
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default CardWiset
+export default CardWiset;

@@ -1,4 +1,9 @@
 h1 {
-    text-align: center;
-    color: black;
+  text-align: center;
+  color: black;
+}
+h2 {
+  text-align: center;
+  color: black;
+  margin: 10px;
 }

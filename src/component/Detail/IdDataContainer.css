@@ -1,0 +1,92 @@
+.ContainerDetail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  padding: 20px;
+}
+.cards .name {
+  font-size: 20px;
+}
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.thumbnail {
+  width: 80px; /* Tamaño más grande para las miniaturas */
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1); /* Efecto de hover */
+}
+
+.Productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+
+.cards {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 10px;
+  width: 300px; /* Ajusta el ancho de las tarjetas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}
+
+.cards img {
+  width: 100%;
+  height: 350px; /* Mantiene la altura de las imágenes */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cards h2 {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.cards p {
+  font-size: 20px;
+  color: #333;
+}
+
+.cards button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cards button:hover {
+  background-color: #0056b3;
+}
+
+.main-image {
+  width: 100%; /* Ajusta el tamaño de la imagen principal */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.descripccion {
+  margin: 5px 0;
+  color: black;
+}

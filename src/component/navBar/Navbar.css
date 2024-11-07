@@ -3,7 +3,7 @@
   width: 100%;
   background-color: rgba(53, 188, 178, 255);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .listado {
   list-style: none;

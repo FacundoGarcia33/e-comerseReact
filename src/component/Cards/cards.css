@@ -1,0 +1,78 @@
+.productos-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Color de fondo suave */
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Color del texto */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards-carrito {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: calc(30% - 20px); /* Ajusta el ancho según el diseño que desees */
+    transition: transform 0.2s;
+}
+
+.cards-carrito:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.card-image {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.card-details {
+    text-align: center;
+}
+
+.card-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-quantity,
+.card-price,
+.card-total {
+    color: #555;
+}
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: start; 
+    color: #333; 
+}
+.borrasProduct {
+    display: inline-block; /* Para que el padding y el tamaño funcionen bien */
+    width: 150px; /* Ancho del círculo */
+    height: 40px; /* Alto del círculo */
+    background-color: #ff4d4d; /* Color de fondo (rojo claro) */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    line-height: 40px; /* Centra verticalmente el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.borrasProduct:hover {
+    background-color: #ff1a1a; /* Color de fondo al pasar el mouse */
+}
+
+.borrasProduct:active {
+    transform: scale(0.95); /* Efecto de presión al hacer clic */
+}

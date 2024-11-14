@@ -1,6 +1,7 @@
 import "./cards.css";
 import { useContext } from "react";
 import { Cartcontext } from "../context/context";
+import { Link } from "react-router-dom";
 const Cards = () => {
     const {Cart, totalPrice, deleteId} =useContext(Cartcontext)
     return (
@@ -25,6 +26,7 @@ const Cards = () => {
         </div>
     </div>
     <p className="total">Total de la compra: {totalPrice()}</p>
+    <Link className="TerminarCompra" to="/checkout">Terminar Compra</Link>
 </>
     );
 };

@@ -5,6 +5,8 @@ import IdDataContainer from "./component/Detail/IdDataContainer";
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import { CartPower } from "./component/context/context";
 import Cards from "./component/Cards/cards";
+import Checkaut from "./component/checkaut/Checkaut";
+
 
 function App() {
   return (
@@ -20,8 +22,8 @@ function App() {
       <Route path="/category/:Idcategory" element={<ItemDataContainer/>} />
       <Route path="/detail/:Idproducto" element={<IdDataContainer/>} />
       <Route path="/card" element={<Cards />} />
+      <Route path="checkout" element={<Checkaut/>}/>
       </Routes>
-
       
       </CartPower>
       </BrowserRouter>

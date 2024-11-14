@@ -1,0 +1,100 @@
+.MiFormulario {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.MiFormulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.MiFormulario label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.MiFormulario input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.MiFormulario input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.MiFormulario button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.MiFormulario button:hover {
+    background-color: #0056b3;
+}
+/* styles.css */
+
+.OrdenForm {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.OrdenForm h2 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.OrdenForm .success-message {
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #e8f5e9;
+}
+
+.success-message h2 {
+    color: #4CAF50;
+    font-family: 'Arial', sans-serif;
+}
+
+.success-message p {
+    color: #555;
+}
+
+.IncioForm {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.IncioForm:hover {
+    background-color: #0056b3;
+}
+

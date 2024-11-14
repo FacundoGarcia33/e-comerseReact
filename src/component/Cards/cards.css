@@ -76,3 +76,24 @@ h2 {
 .borrasProduct:active {
     transform: scale(0.95); /* Efecto de presión al hacer clic */
 }
+
+
+.TerminarCompra {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.TerminarCompra:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.TerminarCompra:active {
+    transform: scale(0.95);
+}

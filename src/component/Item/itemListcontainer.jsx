@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./itemListcintainer.css";
-import { collection, getDocs } from "firebase/firestore"; // Cambia getDoc por getDocs
+import { collection, getDocs, query, where } from "firebase/firestore"; 
 import db from "../../db/db";
 
 const ItemDataContainer = () => {
@@ -11,15 +10,15 @@ const ItemDataContainer = () => {
   const { Idcategory } = useParams();
 
   const mostrarProducto = () => {
-    const MisProductos = collection(db, "productos");
-
-    getDocs(MisProductos) // Cambia getDoc por getDocs
+    const MisProductos = collection(db, "Productos");
+    getDocs(MisProductos)
       .then((datadb) => {
-        const getProducts = datadb.docs.map((productdb) => {
-          return { id: productdb.id, ...productdb.data() };
-        });
+        const getProducts = datadb.docs.map((productdb) => ({
+          id: productdb.id, 
+          ...productdb.data(),
+        }));
         setProductos(getProducts);
-        setLoading(false); // Cambia el estado de loading a false después de cargar
+        setLoading(false); 
       })
       .catch((error) => {
         console.error("Error al obtener productos:", error);
@@ -27,8 +26,29 @@ const ItemDataContainer = () => {
       });
   };
 
+  const filterarPorductos = () => {
+    const FilterProducts = collection(db, "Productos");
+    const querycategory = query(FilterProducts, where("category", "==", Idcategory));
+    getDocs(querycategory)
+      .then((datacategory) => { 
+        const findCategory = datacategory.docs.map((productsDb) => { 
+          return { id: productsDb.id, ...productsDb.data() };
+        });
+        setProductos(findCategory);
+        setLoading(false); 
+      })
+      .catch((error) => {
+        console.error("Error al filtrar productos:", error);
+        setLoading(false);
+      });
+  };
+
   useEffect(() => {
-    mostrarProducto();
+    if (Idcategory) {
+      filterarPorductos();
+    } else {
+      mostrarProducto();
+    }
   }, [Idcategory]);
 
   return (
@@ -38,7 +58,7 @@ const ItemDataContainer = () => {
       ) : (
         productos.map((producto) => (
           <div key={producto.id} className="card">
-            <img src={producto.image[0]} alt="" />
+            <img src={producto.image ? producto.image[0] : "default_image_url"} alt={producto.name} />
             <h2 className="name">{producto.name}</h2>
             <p>Precio: ${producto.price}</p>
             <p>Category: {producto.category}</p>

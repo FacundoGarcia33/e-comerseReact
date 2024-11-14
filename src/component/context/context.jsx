@@ -16,6 +16,9 @@ const CartPower = ({ children }) => {
             setCart([...Cart, newProduct])
         }
     }
+    const BorrasProducto = () => {
+        setCart([])
+    }
     const inCard = (idproduct) => {
       return  Cart.some((productCart) => productCart.id=== idproduct)
     }
@@ -33,7 +36,7 @@ const CartPower = ({ children }) => {
         setCart(filterProducts)
     }
     return (
-        <Cartcontext.Provider value={{ Cart, Micard, totalQuantyti, totalPrice, deleteId}}>
+        <Cartcontext.Provider value={{ Cart, Micard, totalQuantyti, totalPrice, deleteId, BorrasProducto}}>
             {children}
         </Cartcontext.Provider>
     );

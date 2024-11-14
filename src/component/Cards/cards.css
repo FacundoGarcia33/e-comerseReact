@@ -58,7 +58,7 @@ h2 {
     color: #333; 
 }
 .borrasProduct {
-    display: inline-block; /* Para que el padding y el tamaño funcionen bien */
+    display: inline-block; 
     width: 150px; /* Ancho del círculo */
     height: 40px; /* Alto del círculo */
     background-color: #ff4d4d; /* Color de fondo (rojo claro) */

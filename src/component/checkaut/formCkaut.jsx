@@ -18,7 +18,7 @@ const FormChekaut = ({ Valores, eventChange, eventSubmit }) => {
                 <label>Numero de telefono</label>
                 <input type="number" placeholder="Ingrese su telefono aqui" name="phone" value={Valores.phone} onChange={eventChange}/>
 
-                <button type="submit">enviar</button>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     );

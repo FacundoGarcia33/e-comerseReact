@@ -1,7 +1,7 @@
 # Shop React 
 
 ## Descripcion
-Este es mi primer proyeto con react espero que les guste 
+Este es mi primer Proyeto con react espero que les guste 
 ## Dependencias
 `Firebase` `react-dom` `react-icons` `react-router-dom` `yup`
 ## Mi linkedin
